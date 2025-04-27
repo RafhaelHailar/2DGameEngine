@@ -6,16 +6,12 @@ class GameCanvas {
         this.#canvas = document.createElement("canvas");
         this.#canvas.setAttribute("id", name);
     }
+    get2DContext() { return this.#canvas.getContext("2d") }
     setSize(width,height) {
         this.#canvas.width = width;
         this.#canvas.height = height;        
     }
-    mount() {
-        document.body.appendChild(this.#canvas);
-        window.addEventListener("keydown", async () => {
-            await fetch("/event/keydown");
-        });
-    }
+    mount() { document.body.appendChild(this.#canvas)} ;
 }
 
 export function createCanvas(name) {

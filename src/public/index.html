@@ -11,10 +11,11 @@
 </head>
 <body>
     <script type="module">
-        import { createCanvas } from "/client/index.js";
+        import { createCanvas, createEngine } from "/client/index.js";
 
         const canvas = createCanvas("map");
         canvas.setSize(600, 600);
+        const engine = createEngine(canvas);
     </script>
 </body>
 </html>
