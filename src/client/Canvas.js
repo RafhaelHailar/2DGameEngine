@@ -12,6 +12,9 @@ class GameCanvas {
     }
     mount() {
         document.body.appendChild(this.#canvas);
+        window.addEventListener("keydown", async () => {
+            await fetch("/event/keydown");
+        });
     }
 }
 

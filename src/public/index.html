@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST</title>
     <style>
-        body { background: black }
+        body { background: black; padding: 0; margin: 0; }
         canvas { background: white;}
     </style>
 </head>
@@ -14,6 +14,7 @@
         import { createCanvas } from "/client/index.js";
 
         const canvas = createCanvas("map");
+        canvas.setSize(600, 600);
     </script>
 </body>
 </html>
